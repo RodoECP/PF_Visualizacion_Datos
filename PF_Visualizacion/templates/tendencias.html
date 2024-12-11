@@ -1,8 +1,42 @@
 {% extends "base.html" %}
 
+{% block title %}Tendencias a lo largo del tiempo{% endblock %}
+
 {% block content %}
 <main>
-    <h2>Tendencias a lo Largo del Tiempo</h2>
-    <p>Este análisis se enfoca en las tendencias de producción y éxito cinematográfico a lo largo de las décadas.</p>
+    <!-- Información General sobre las Tendencias -->
+    <section class="introduction">
+        <h2>Tendencias a lo largo del tiempo</h2>
+        <p class="justified-text">
+            La industria cinematográfica ha experimentado cambios significativos en las últimas décadas. Estos cambios han influido en los ingresos generados por diferentes géneros y en los presupuestos asignados a las producciones cinematográficas. A través de las gráficas presentadas, podemos observar la evolución de los ingresos y presupuestos por género desde 1980 hasta 2020, y cómo estos factores pueden influir en las decisiones de inversión para los estudios cinematográficos.
+        </p>
+    </section>
+
+    <!-- Gráfico: Evolución de Ingresos por Género -->
+    <section class="graph">
+        <h2>Evolución de los Ingresos por Género</h2>
+        <p class="justified-text">
+            La gráfica de Evolución de Ingresos por Género muestra cómo han evolucionado los ingresos brutos generados por las películas de diferentes géneros desde 1980 hasta 2020. A través de las líneas que representan cada género, podemos observar que las películas de acción han sido consistentemente las más rentables, dominando el panorama desde 1990 hasta la fecha sin ser superadas por ningún otro género. Le sigue el género de animación, que ha mostrado un crecimiento constante, con algunos altibajos en la última década. En tercer lugar se encuentra el género de comedia, que experimentó un aumento significativo en los años 2000, pero que en los últimos años ha mostrado una leve disminución, lo que sugiere que podría ser superado por el género de aventuras en el futuro cercano. Esta información es útil para un estudio de cine al evaluar en qué géneros invertir dependiendo de la rentabilidad histórica, con la acción y la animación como opciones estables y con gran potencial.
+        </p>
+        <iframe src="https://datawrapper.dwcdn.net/dQH1p/3/" frameborder="0" width="600px" height="469px"></iframe>
+    </section>
+
+    <!-- Gráfico: Evolución de Presupuesto por Género -->
+    <section class="graph">
+        <h2>Evolución del Presupuesto por Género</h2>
+        <p class="justified-text">
+            La gráfica de Evolución de Presupuesto por Género muestra la cantidad promedio de dinero invertido en películas de cada género entre 1980 y 2020. En esta gráfica se observan tendencias similares a las de la gráfica anterior, lo que tiene sentido, ya que si un género demuestra generar altos ingresos, es probable que se le asigne un mayor presupuesto. El género que ha recibido más inversión es acción, seguido por animación, con una diferencia notable. Un hallazgo interesante en esta gráfica es que el género de comedia ha experimentado una disminución en el presupuesto en comparación con aventura, lo cual podría explicarse por la caída en los ingresos generados por las películas de comedia en los últimos años.
+        </p>
+        <iframe src="https://datawrapper.dwcdn.net/PIBSA/3/" frameborder="0" width="600" height="460"></iframe>
+    </section>
+
+    <!-- Recomendaciones -->
+    <section class="recommendations">
+        <h2>Recomendaciones</h2>
+        <p class="justified-text">
+            Con base en las observaciones de ambas gráficas, se pueden ofrecer dos recomendaciones. Para un estudio con un mayor presupuesto, sería viable invertir en animación, ya que este género ha mostrado una tendencia creciente en inversión, o en acción, que constantemente ha generado altos ingresos. Para estudios más pequeños, se recomienda centrarse en géneros de menor presupuesto, como crimen, terror o drama, los cuales continúan siendo rentables sin la necesidad de grandes inversiones. En cualquier caso, se desaconseja la inversión en comedias, ya que el rendimiento de este género ha estado disminuyendo en términos de ingresos en los últimos años.
+        </p>
+    </section>
+
 </main>
 {% endblock content %}

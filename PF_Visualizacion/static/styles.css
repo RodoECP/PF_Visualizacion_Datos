@@ -1,210 +1,167 @@
-/* styles.css */
-
-/* General styles */
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* Blanco */
-    color: #000000; /* Negro */
+    color: #333;
 }
 
-h1.section-title, h2.section-title {
-    font-family: 'Century Gothic', sans-serif;
-    color: #000000;
-}
-
-h2.section-title {
-    border-bottom: 2px solid #555555; /* Gris oscuro */
-    padding-bottom: 5px;
-}
-
-/* Header styles */
-header {
-    background-color: #000000; /* Negro */
-    color: #ffffff; /* Blanco */
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-header .logo {
-    height: 100px;
-    width: auto;
-    margin-right: 20px;
-}
-
-header h1 {
-    font-size: 3.5em;
-    font-family: 'Century Gothic', sans-serif;
-    color: #ffffff;
-    margin: 0;
-}
-
-/* Menu container styles */
-.menu-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Menu item styles */
-.menu-item {
-    background: #f5f5f5; /* Gris claro */
-    border: 1px solid #ccc; /* Gris medio */
-    border-radius: 8px;
+header, footer {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
     text-align: center;
-    overflow: hidden;
-    transition: transform 0.2s;
 }
 
-.menu-item:hover {
-    transform: scale(1.05);
-}
-
-.menu-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 1px solid #ddd;
-}
-
-.graph-name {
-    font-size: 18px;
-    margin: 15px 0;
-    padding: 0 10px;
-    color: #333333; /* Gris oscuro */
-}
-
-.button {
-    display: inline-block;
-    background-color: #000000; /* Negro */
-    color: #ffffff; /* Blanco */
+header a.logo {
+    font-size: 24px;
+    color: #fff;
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin: 10px 0;
+    font-weight: bold;
+}
+
+header #navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header #navbar ul li {
+    margin: 0 15px;
+}
+
+header #navbar ul li a {
+    text-decoration: none;
+    color: white;
     font-size: 16px;
+    padding: 8px 15px;
     transition: background-color 0.3s;
 }
 
-.button:hover {
-    background-color: #555555; /* Gris oscuro */
+header #navbar ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
 }
 
-iframe {
-    width: 100%;
-    height: 125vh;
+/* Main content area */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para los botones */
+button, .btn, .button {
+    background-color: #333;
+    color: white;
     border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+button:hover, .btn:hover, .button:hover {
+    background-color: #555;
+}
+
+/* Estilo para el enlace de la clase back-button */
+.back-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-button .button {
+    background-color: #555;
+}
+
+.back-button .button:hover {
+    background-color: #777;
+}
+
+/* Sección de Introducción */
+.introduction, .data-description {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.introduction h2, .data-description h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 .justified-text {
     text-align: justify;
     line-height: 1.6;
-    font-size: 1.1em;
-    margin-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: #333333; /* Gris oscuro */
+    color: #555;
 }
 
-.introduction {
-    padding: 40px;
-    background-color: #f5f5f5; /* Gris claro */
-    border-radius: 8px;
-    border: 1px solid #ccc; /* Gris medio */
-    margin: 20px auto;
-    max-width: 900px;
+/* Contenedor de los botones */
+.menu-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-section {
-    margin-bottom: 40px;
+.menu-item {
+    text-align: center;
+    width: 200px;
 }
 
-h2 {
-    font-size: 1.5rem;
-    color: #333333; /* Gris oscuro */
-    margin-bottom: 10px;
+.menu-item h3 {
+    font-size: 20px;
+    color: #333;
 }
 
-ol li {
-    margin-bottom: 10px;
-    color: #333333; /* Gris oscuro */
+.menu-item .button {
+    margin-top: 10px;
 }
 
-.data-description {
-    background-color: #f5f5f5; /* Gris claro */
+/* Sección de Gráficos */
+.graph {
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
-    border: 1px solid #ccc; /* Gris medio */
-    max-width: 800px;
-    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
-.data-description h2 {
-    font-size: 2em;
-    color: #333333; /* Gris oscuro */
-    text-align: center;
-    margin-bottom: 20px;
+.graph h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
 }
 
-.data-description p {
-    font-size: 1.1em;
+.graph p.justified-text {
+    text-align: justify;
     line-height: 1.6;
-    color: #333333; /* Gris oscuro */
+    color: #555;
 }
 
-.data-list li {
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc; /* Gris medio */
-    color: #333333; /* Gris oscuro */
-}
-
-.data-list li:last-child {
-    border-bottom: none;
-}
-
-.back-button {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.scatter-plot h2 {
-    font-size: 1.5rem;
-    color: #333333; /* Gris oscuro */
-    margin-bottom: 10px;
-}
-
-.chart-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.chart-image {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ccc; /* Gris medio */
-    border-radius: 5px;
-}
-
-.big-text {
-    font-size: 4em;
-    font-weight: bold;
-    text-align: center;
-    color: #000000; /* Negro */
-    margin-top: 50px;
-}
-
-.chart-section {
-    background-color: #f5f5f5; /* Gris claro */
+/* Estilo para los iframes dentro de gráficos */
+.graph iframe {
+    width: 100%;
+    height: 460px;
+    border: none;
+    margin-top: 15px;
     border-radius: 8px;
-    border: 1px solid #ccc; /* Gris medio */
-    padding: 40px;
-    margin: 40px auto;
-    max-width: 900px;
-    text-align: center;
+}
+
+/* Footer */
+footer p {
+    font-size: 14px;
+    color: #fff;
 }

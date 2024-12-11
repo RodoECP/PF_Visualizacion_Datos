@@ -1,8 +1,16 @@
 {% extends "base.html" %}
 
+{% block title %}Éxito Según el Género{% endblock %}
+
 {% block content %}
 <main>
-    <h2>Análisis de Géneros</h2>
-    <p>Este espacio está dedicado a explorar la distribución y popularidad de los géneros cinematográficos.</p>
+    <!-- Información sobre el Éxito Según el Género -->
+    <section class="introduction">
+        <h2>Éxito Según el Género</h2>
+        <p class="justified-text">
+            La gráfica de Géneros con Mayor Éxito muestra los diferentes géneros cinematográficos junto con su retorno de inversión (ROI) promedio. Las barras están coloreadas para diferenciar si el ROI es considerado exitoso (mayor a 2.25) o no exitoso (menor a 2.25), donde el color verde indica un ROI positivo y el rojo uno negativo. Según esta gráfica, el género de terror destaca como el más exitoso en términos de ROI, lo cual tiene sentido al considerar que las películas de terror suelen tener presupuestos relativamente bajos pero pueden generar grandes ingresos, especialmente en la última década. Este género se ve acompañado por las películas de familia, que también presentan un ROI alto debido a la demanda constante de películas aptas para niños y familias, un público recurrente en las salas de cine. Con esta información, se recomienda que un estudio nuevo considere especializarse en la producción de películas de terror o familiares, ya que ambos géneros presentan un alto potencial de rentabilidad.
+        </p>
+        <div>{{ graph_html|safe }}</div>
+    </section>
 </main>
 {% endblock content %}

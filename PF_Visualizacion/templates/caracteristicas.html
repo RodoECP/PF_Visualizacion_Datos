@@ -1,8 +1,27 @@
 {% extends "base.html" %}
 
+{% block title %}Éxito Según Características de la Película{% endblock %}
+
 {% block content %}
 <main>
-    <h2>Análisis de Clasificación y Duración</h2>
-    <p>Explora la relación entre la clasificación y la duración de las películas.</p>
+    <!-- Información sobre el Éxito Según Características de la Película -->
+    <section class="introduction">
+        <h2>Éxito Según Características de la Película</h2>
+        <p class="justified-text">
+            La gráfica de Películas Exitosas por Tipo de Clasificación en formato de dona muestra la proporción de películas que se consideran exitosas por tener un ROI de 2.25 o mayor, agrupadas según su clasificación. Al observar la distribución, se puede notar que las películas con clasificación R ocupan una parte significativa del gráfico, lo que indica que son las más exitosas en términos de rentabilidad, seguidas por las de clasificación PG-13, PG, G y, finalmente, NC-17, que tiene la menor proporción de películas exitosas.
+            Este patrón sugiere que las películas con clasificación R tienen un alto potencial de éxito financiero, probablemente debido a su atractivo para audiencias maduras que buscan contenido más provocador o controvertido. Las películas PG-13 también muestran un buen rendimiento, logrando un equilibrio entre una amplia audiencia y la posibilidad de generar ingresos considerables. Por otro lado, las clasificaciones PG y G tienen una menor proporción de películas exitosas, lo que podría reflejar un público más limitado, mientras que NC-17 tiene la menor proporción de éxito, dado su enfoque en una audiencia mucho más restringida.
+            Con base en esta información, se recomienda que un estudio de cine se especialice en la producción de contenido con clasificación R y PG-13. Estas clasificaciones presentan un mayor potencial para generar ingresos, con las películas R orientadas a un público adulto, y las PG-13 ofreciendo un alcance más amplio, atrayendo tanto a jóvenes como a adultos.
+        </p>
+        <div>{{ graph_html1|safe }}</div>
+    </section>
+
+    <section class="introduction">
+        <p class="justified-text">
+            La gráfica de Dispersión entre Duración y ROI para películas con ROI mayor a 2.25 muestra la relación entre la duración de las películas y su retorno de inversión (ROI). Al observar la distribución, se puede notar que la mayoría de las películas con un ROI exitoso tienen una duración que se encuentra entre los 70 y 150 minutos, lo que indica que estas películas son las más exitosas en términos de rentabilidad. En contraste, las películas con duraciones menores a 70 minutos o mayores a 150 minutos representan una proporción menor de las películas exitosas.
+            Este patrón sugiere que las películas con una duración moderada tienen un mayor potencial de éxito financiero, posiblemente debido a que estas logran un equilibrio adecuado entre contenido atractivo y costos de producción. Las películas más cortas, aunque pueden ser más económicas de producir, podrían no generar suficientes ingresos debido a la falta de desarrollo o profundidad. Por otro lado, las películas muy largas podrían enfrentar un mayor riesgo financiero debido a los altos costos de producción y la posibilidad de que su extensión no atraiga a toda la audiencia.
+            Con base en esta información, se recomienda que los estudios cinematográficos consideren una duración de 70 a 150 minutos para maximizar las posibilidades de obtener un ROI exitoso. Este rango parece ser el más equilibrado en términos de costos de producción y retorno económico.
+        </p>
+        <div>{{ graph_html2|safe }}</div>
+    </section>
 </main>
 {% endblock content %}

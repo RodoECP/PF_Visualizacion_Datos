@@ -5,35 +5,104 @@
     <!-- Información General de la Problemática -->
     <section class="introduction">
         <h2>Información General</h2>
-        <p class="justified-text">Aquí se colocará la información general sobre la problemática que se desea analizar. Este espacio está diseñado para presentar una visión general y contextualizar los datos.</p>
+        <p class="justified-text">
+            En este proyecto, se analizarán los datos de diversas películas a lo largo de 40 años con el objetivo de tomar decisiones informadas sobre el tipo de películas en las que un estudio cinematográfico debería especializarse para maximizar su éxito y rentabilidad. Se busca identificar patrones y características comunes en las películas exitosas, en términos de ingresos y calificación, con el fin de orientar la estrategia del estudio hacia la producción de ciertos géneros o tipos de películas que optimicen su rendimiento financiero.
+        </p>
+        <p class="justified-text">
+            A lo largo del análisis, se pretende entender cómo los diferentes géneros y características de las películas influyen en su éxito comercial. Se explorarán tendencias en los ingresos brutos, el retorno de inversión (ROI) y la evolución de los presupuestos de las producciones, lo que permitirá formular recomendaciones concretas sobre en qué tipo de cine un estudio debería centrarse. Este enfoque se apoya en la premisa de que, en un mercado altamente competitivo y volátil, especializarse en géneros o nichos específicos puede proporcionar una ventaja significativa a los estudios más pequeños o nuevos, permitiéndoles reducir riesgos y maximizar sus oportunidades de éxito.
+        </p>
     </section>
 
     <!-- KPIs -->
     <section class="data-description">
         <h2>KPIs Clave</h2>
-        <p class="justified-text">Coloca aquí los indicadores clave de desempeño (KPIs) relacionados con la problemática.</p>
+        <ul>
+            <li><strong>Promedio de Ingresos Brutos por Género:</strong> Muestra qué géneros generan más ingresos en promedio, proporcionando una base para decidir en qué géneros especializarse.</li>
+            <li><strong>Retorno de Inversión (ROI) por Género:</strong> Fórmula: Promedio de (gross - budget) / budget por género. Permite evaluar qué géneros ofrecen mejores retornos sobre la inversión, un factor crucial para determinar la rentabilidad de las producciones.</li>
+            <li><strong>Distribución de Géneros en el Catálogo de Películas:</strong> Indica qué porcentaje del catálogo de películas corresponde a cada género, ayudando a evaluar si el estudio debe diversificar sus producciones o especializarse más en ciertos géneros.</li>
+        </ul>
+    </section>
+
+    <!-- Fuente de Datos -->
+    <section class="data-source">
+        <h2>Fuente de Datos</h2>
+        <p class="justified-text">
+            El dataset utilizado proviene de Kaggle en el siguiente enlace: <a href="https://www.kaggle.com/datasets/danielgrijalvas/movies">Kaggle Movies Dataset</a>. Los datos han sido recopilados desde la página IMDB, una fuente de alta credibilidad. Aunque los datos son bastante completos, se identificaron y corrigieron varios problemas a lo largo del proceso de limpieza.
+        </p>
+    </section>
+
+    <!-- Descripción de los Datos -->
+    <section class="data-description">
+        <h2>Descripción de los Datos</h2>
+        <p class="justified-text">
+            El archivo CSV movies.csv contiene información sobre una variedad de películas. Los datos incluyen varias columnas relacionadas con los detalles de cada película, tales como:
+        </p>
+        <ul>
+            <li><strong>name:</strong> El nombre de la película.</li>
+            <li><strong>rating:</strong> La calificación que la película ha recibido.</li>
+            <li><strong>released:</strong> La fecha de estreno de la película.</li>
+            <li><strong>genre:</strong> El género de la película (por ejemplo, acción, comedia, drama, etc.).</li>
+            <li><strong>director:</strong> El director o los directores de la película.</li>
+            <li><strong>writer:</strong> El guionista o los guionistas de la película.</li>
+            <li><strong>star:</strong> Los actores principales o las estrellas de la película.</li>
+            <li><strong>country:</strong> El país o los países en los que se produjo la película.</li>
+            <li><strong>company:</strong> La productora de la película.</li>
+            <li><strong>budget:</strong> El presupuesto de la película.</li>
+            <li><strong>gross:</strong> Los ingresos brutos de la película.</li>
+        </ul>
+        <p class="justified-text">
+            Cada fila representa una película diferente y contiene estos atributos. Sin embargo, se presentaron varios problemas en los datos que requerían ser corregidos.
+        </p>
+    </section>
+
+    <!-- Problemas Encontrados en los Datos -->
+    <section class="data-issues">
+        <h2>Problemas Encontrados en los Datos</h2>
+        <ul>
+            <li><strong>Fechas inconsistentes:</strong> La columna released contenía fechas en formatos no uniformes, lo que dificultaba el análisis de tendencias.</li>
+            <li><strong>Valores nulos o vacíos:</strong> Varias columnas contenían valores nulos o vacíos que afectaban los análisis.</li>
+            <li><strong>Espacios innecesarios y formatos inconsistentes:</strong> Algunas columnas de texto tenían espacios innecesarios y formatos inconsistentes.</li>
+            <li><strong>Datos no estandarizados:</strong> Algunos valores de fecha no seguían el formato estándar, causando problemas al analizar las fechas.</li>
+        </ul>
+    </section>
+
+    <!-- Proceso de Preparación de Datos -->
+    <section class="data-cleaning">
+        <h2>Proceso de Preparación de Datos</h2>
+        <p class="justified-text">El proceso de limpieza de los datos incluyó los siguientes pasos:</p>
+        <ul>
+            <li>Eliminación de filas con valores nulos o vacíos.</li>
+            <li>Reformateo de fechas utilizando la función <code>formatear_fecha(date_str)</code> para manejar formatos inconsistentes.</li>
+            <li>Eliminación de espacios innecesarios y normalización de los textos.</li>
+            <li>Adición de columna con el ROI (Retorno de Inversión) calculado con la fórmula: <code>df['ROI'] = ((df['gross'] - df['budget']) / df['budget']).round(4)</code>.</li>
+        </ul>
     </section>
 
     <!-- Botón para Análisis General -->
     <div class="back-button">
-        <a href="/problematica" class="button">Análisis de la Problemática</a>
+        
+        <a href="/problematica" class="button"><img src="/static/Popcorn.png" width="50" height="50">Análisis de la Problemática</a>
     </div>
 
     <!-- Botones para Cada Análisis Específico -->
     <section class="menu-container">
         <div class="menu-item">
+            <img src="/static/Masks.png" width="50" height="50">
             <h3>Éxito según el género</h3>
             <a href="/genero" class="button">Explorar</a>
         </div>
         <div class="menu-item">
+            <img src="/static/Chair.webp" width="50" height="50">
             <h3>Éxito según los involucrados</h3>
             <a href="/involucrados" class="button">Explorar</a>
         </div>
         <div class="menu-item">
+            <img src="/static/Clapper.png" width="50" height="50">
             <h3>Éxito según las características de la película</h3>
             <a href="/caracteristicas" class="button">Explorar</a>
         </div>
         <div class="menu-item">
+            <img src="/static/Camera.png" width="50" height="50">
             <h3>Tendencias a lo Largo del Tiempo</h3>
             <a href="/tendencias" class="button">Explorar</a>
         </div>
@@ -41,7 +110,8 @@
 
     <!-- Botón para Conclusiones -->
     <div class="back-button">
-        <a href="/conclusion" class="button">Conclusiones/Recomendaciones</a>
+        
+        <a href="/conclusion" class="button"><img src="/static/People.png" width="50" height="50">Conclusiones/Recomendaciones</a>
     </div>
 </main>
 {% endblock content %}

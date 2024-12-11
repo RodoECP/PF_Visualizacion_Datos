@@ -1,8 +1,36 @@
 {% extends "base.html" %}
 
+{% block title %}Éxito Según los Involucrados{% endblock %}
+
 {% block content %}
 <main>
-    <h2>Análisis de Directores y Actores</h2>
-    <p>Aquí se presenta el análisis de las contribuciones de directores y actores en las películas más destacadas.</p>
+    <!-- Información sobre el Éxito Según los Involucrados -->
+    <section class="introduction">
+        <h2>Éxito Según los Involucrados</h2>
+        <p class="justified-text">
+            En la gráfica de Distribución de Ingresos Brutos de los Top 10 Directores, se muestran los 10 directores más destacados según los ingresos generados por las películas que han dirigido. Entre estos nombres figuran algunos de los más grandes de la industria, como Steven Spielberg, James Cameron, Christopher Nolan y J.J. Abrams, entre otros. Esta gráfica no solo muestra el promedio de los ingresos generados, sino también la dispersión de esos ingresos, lo que es clave para evaluar el riesgo financiero al trabajar con estos directores.
+            La dispersión en los ingresos nos indica el nivel de riesgo que podríamos asumir. Por ejemplo, James Cameron puede generar hasta 2.8B USD, pero también puede caer hasta 78M USD. Esto sugiere que hay una alta variabilidad en el éxito financiero de las películas dirigidas por él. En cambio, directores como Tim Burton, Ron Howard y Steven Spielberg tienen un rango más compacto, lo que implica un riesgo financiero menor, aunque sus ingresos mínimos sean inferiores a los de otros directores más volátiles.
+            En base a esta información, se recomienda que un estudio de cine considere trabajar con directores como Tim Burton, Ron Howard y Steven Spielberg, ya que su rango más predecible de ingresos reduce el riesgo financiero asociado a sus proyectos.
+        </p>
+        <div>{{ graph_html1|safe }}</div>
+    </section>
+
+    <section class="introduction">
+        <p class="justified-text">
+            En la gráfica de Distribución de Ingresos Brutos de los Top 10 Actores, se presentan los 10 mejores actores según los ingresos brutos generados en las películas donde han sido la estrella. Al igual que en la gráfica anterior, esta información es útil para evaluar qué actores podrían representar un riesgo financiero, como es el caso de Robert Downey Jr., cuyo rango de ingresos varía considerablemente entre un máximo de 2.79B USD y un mínimo de 435K USD.
+            En este contexto, los actores con un rango más compacto y estable, como Johnny Depp, Leonardo DiCaprio y Tom Hanks, son opciones recomendables para trabajar, ya que su desempeño financiero tiende a ser más consistente, similar a los directores previamente mencionados. Otra opción sería Bruce Willis, quien también tiene un rango relativamente estable. Sin embargo, es importante señalar que Bruce Willis ya no está activo debido a su jubilación, tras haber recibido un diagnóstico médico de demencia.
+            En base a estos análisis, se recomienda que un estudio de cine considere trabajar con actores como Johnny Depp, Leonardo DiCaprio y Tom Hanks, quienes ofrecen un menor riesgo financiero gracias a su consistencia en el éxito de taquilla.
+        </p>
+        <div>{{ graph_html2|safe }}</div>
+    </section>
+
+    <section class="introduction">
+        <p class="justified-text">
+            En estas dos gráficas se muestran los 10 mejores actores y directores según el retorno de inversión (ROI) que han generado en sus proyectos. Los nombres de los directores y actores se presentan junto con el color de la barra, que indica en qué género de películas predominan. Al analizar estas gráficas, se observa una historia distinta en comparación con otras, ya que aquí se trabaja sobre el ROI en lugar de los ingresos brutos. En ambas gráficas se destaca un género con un alto potencial de ROI: el de Terror. Los cuatro primeros puestos en ambas gráficas corresponden a este género, seguidos por una mezcla de Comedia, Drama, Acción y Aventuras.
+            Otro aspecto interesante es que los miembros destacados en estas gráficas provienen principalmente de producciones pequeñas, es decir, de películas con presupuestos muy bajos en comparación con el resto de la industria y creadas por cineastas con relativamente poca experiencia. Los ejemplos más representativos de esto son "The Blair Witch Project" y "Paranormal Activity", que tenían presupuestos de 60K USD y 15K USD, respectivamente, y fueron creadas por personas que eran principiantes en el mundo del cine. Estas observaciones son clave para un estudio pequeño, ya que podría ser más conveniente enfocarse en proyectos más pequeños con presupuestos reducidos. De esta forma, el riesgo de pérdidas se minimiza, y a la vez, se abre la posibilidad de recuperar la inversión de forma más rápida.
+        </p>
+        <div>{{ graph_html3|safe }}</div>
+        <div>{{ graph_html4|safe }}</div>
+    </section>
 </main>
 {% endblock content %}
