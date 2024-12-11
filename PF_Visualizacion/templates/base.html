@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Visualizacion de Datos{% endblock %}</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header id="header">
+        <a href="/" class="logo">Estudios Cinematográficos</a>
+
+        <!-- Menú de navegación -->
+        <nav id="navbar">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/genero">Análisis de Géneros</a></li>
+                <li><a href="/involucrados">Directores y Actores</a></li>
+                <li><a href="/caracteristicas">Clasificación y Duración</a></li>
+                <li><a href="/tendencias">Tendencias a lo Largo del Tiempo</a></li>
+                <li><a href="/conclusion">Conclusiones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; 2024 Estudios Cinematográficos. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

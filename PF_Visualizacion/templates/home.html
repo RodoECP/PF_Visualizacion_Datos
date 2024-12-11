@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+    <!-- Información General de la Problemática -->
+    <section class="introduction">
+        <h2>Información General</h2>
+        <p class="justified-text">Aquí se colocará la información general sobre la problemática que se desea analizar. Este espacio está diseñado para presentar una visión general y contextualizar los datos.</p>
+    </section>
+
+    <!-- KPIs -->
+    <section class="data-description">
+        <h2>KPIs Clave</h2>
+        <p class="justified-text">Coloca aquí los indicadores clave de desempeño (KPIs) relacionados con la problemática.</p>
+    </section>
+
+    <!-- Botón para Análisis General -->
+    <div class="back-button">
+        <a href="/problematica" class="button">Análisis de la Problemática</a>
+    </div>
+
+    <!-- Botones para Cada Análisis Específico -->
+    <section class="menu-container">
+        <div class="menu-item">
+            <h3>Éxito según el género</h3>
+            <a href="/genero" class="button">Explorar</a>
+        </div>
+        <div class="menu-item">
+            <h3>Éxito según los involucrados</h3>
+            <a href="/involucrados" class="button">Explorar</a>
+        </div>
+        <div class="menu-item">
+            <h3>Éxito según las características de la película</h3>
+            <a href="/caracteristicas" class="button">Explorar</a>
+        </div>
+        <div class="menu-item">
+            <h3>Tendencias a lo Largo del Tiempo</h3>
+            <a href="/tendencias" class="button">Explorar</a>
+        </div>
+    </section>
+
+    <!-- Botón para Conclusiones -->
+    <div class="back-button">
+        <a href="/conclusion" class="button">Conclusiones/Recomendaciones</a>
+    </div>
+</main>
+{% endblock content %}
